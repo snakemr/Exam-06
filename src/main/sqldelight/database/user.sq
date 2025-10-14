@@ -1,0 +1,18 @@
+CREATE TABLE user(
+    name TEXT NOT NULL PRIMARY KEY
+);
+
+all:
+SELECT * FROM user;
+
+insert:
+INSERT INTO user VALUES (?);
+
+update:
+UPDATE user SET name=? WHERE name=?;
+
+delete:
+DELETE FROM user WHERE name=?;
+
+INSERT INTO user
+VALUES ('Администратор');
