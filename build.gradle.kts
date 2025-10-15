@@ -21,6 +21,7 @@ repositories {
 }
 
 val sqldelight: String by project
+val ktor: String by project
 val icons: String by project
 
 dependencies {
@@ -29,6 +30,9 @@ dependencies {
     implementation("org.jetbrains.compose.material:material-icons-core:$icons")
     implementation("app.cash.sqldelight:sqlite-driver:$sqldelight")
     implementation("app.cash.sqldelight:coroutines-extensions:$sqldelight")
+    implementation("io.ktor:ktor-client-cio:$ktor")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor")
+    implementation("io.ktor:ktor-serialization-gson:$ktor")
 }
 
 compose.desktop {
