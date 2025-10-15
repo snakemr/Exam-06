@@ -13,6 +13,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class Data() {
+    // Измените этот набор функций работы с БД и их параметры,
+    // чтобы они соответствовали вашим SQL-запросам:
 
     fun users() = database.userQueries.all().flow()
 
@@ -20,7 +22,15 @@ class Data() {
 
     fun delete(name: String) = request { database.userQueries.delete(name) }
 
-    //"jdbc:sqlite:database.s3db"
+
+
+
+
+
+
+
+
+    // Ниже этой строки ничего редактировать не нужно!!!
     private val driver = JdbcSqliteDriver(JdbcSqliteDriver.IN_MEMORY, schema = Database.Schema)
     private val database = Database(driver)
 
