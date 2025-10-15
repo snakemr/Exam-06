@@ -15,5 +15,14 @@ import kotlinx.coroutines.delay
 fun Task2() {
     // Пишите здесь решение второго задания
 
+    // Проверка работы функции, удалите это:
+    "8-918-123-45-67".let {
+        Text("$it: " + check(it))
+    }
 
 }
+
+// Регулярное выражение для проверки данных на корректность.
+// Исправьте, чтобы соответствовало вашим данным:
+private val regex = "8-\\d{3}-\\d{3}-\\d{2}-\\d{2}".toRegex()
+private fun check(text: String) = if (regex.matches(text)) "верно" else "ошибка"
