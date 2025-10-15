@@ -18,5 +18,7 @@ import database.User
 fun Task1() {
     // Пишите здесь решение первого задания
 
-
+    // Это пример получения информации из БД, замените своим:
+    val users by remember { data.users() }.collectAsState(emptyList())
+    users.forEach { Text(it) }
 }
