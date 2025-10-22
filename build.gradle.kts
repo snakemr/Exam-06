@@ -2,7 +2,6 @@ plugins {
     kotlin("jvm")
     kotlin("plugin.compose")
     id("org.jetbrains.compose")
-    id("app.cash.sqldelight")
 }
 
 kotlin {
@@ -20,31 +19,21 @@ repositories {
     google()
 }
 
-val sqldelight: String by project
 val ktor: String by project
-val icons: String by project
+val poi: String by project
 
 dependencies {
     implementation(compose.desktop.currentOs)
     implementation(compose.material3)
-    implementation("org.jetbrains.compose.material:material-icons-core:$icons")
-    implementation("app.cash.sqldelight:sqlite-driver:$sqldelight")
-    implementation("app.cash.sqldelight:coroutines-extensions:$sqldelight")
     implementation("io.ktor:ktor-client-cio:$ktor")
     implementation("io.ktor:ktor-client-content-negotiation:$ktor")
     implementation("io.ktor:ktor-serialization-gson:$ktor")
+    implementation("org.apache.poi:poi:$poi")
+    implementation("org.apache.poi:poi-ooxml:$poi")
 }
 
 compose.desktop {
     application {
         mainClass = "MainKt"
-    }
-}
-
-sqldelight {
-    databases {
-        create("Database") {
-            packageName.set("database")
-        }
     }
 }
