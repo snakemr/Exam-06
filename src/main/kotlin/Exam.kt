@@ -28,12 +28,12 @@ const val URL = ""
 // Класс данных для получения информации
 class Data
 // Функция для получения искомого значения
-suspend fun data() = ""
+suspend fun data() = "данные"
 
 
 //** Средства проверки строки на правильность **//
 private val regex = "".toRegex()
-private fun check(s: String) = "не успешно"
+private fun check(s: String) = "результат"
 
 
 //** Средства записи результатов в файл **//
