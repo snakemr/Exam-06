@@ -32,8 +32,8 @@ suspend fun data() = "данные"
 
 
 //** Средства проверки строки на правильность **//
-private val regex = "".toRegex()
-private fun check(s: String) = "результат"
+val regex = "".toRegex()
+fun check(s: String) = "результат"
 
 
 //** Средства записи результатов в файл **//
